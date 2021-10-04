@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../favicon/favicon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <title>Admin</title>
+  </head>
+  <body id="ad" onload="adminCheck()" style="opacity: 0">
+    <h1>ADMIN PANEL</h1>
+    <form method="POST" action="/admin" enctype="multipart/form-data">
+      <span>Calm Video</span>
+      <br />
+      <input type="file" name="calm" />
+      <input type="submit" value="Upload" />
+      <br /><br /><br /><br /><br />
+      <span>Motivate Video</span>
+      <br />
+      <input type="file" name="motivate" />
+      <input type="submit" value="Upload" />
+      <hr />
+    </form>
+    <form method="POST" action="/calmquote" enctype="multipart/form-data">
+      <span>Add JSON -- calm quote</span>
+      <br />
+      <input type="text" name="calmsjon" />
+      <input type="submit" value="Add json" />
+      <br /><br /><br /><br /><br />
+      <hr />
+    </form>
+    <form method="POST" action="/motivatequote" enctype="multipart/form-data">
+      <span>Add JSON -- motivate quote</span>
+      <br />
+      <input type="text" name="motivatejson" />
+      <input type="submit" value="Add json" />
+      <br /><br /><br /><br /><br />
+      <hr />
+    </form>
+    <form method="POST" action="/calmLink" enctype="multipart/form-data">
+      <span>Add JSON -- calm link</span>
+      <br />
+      <input type="text" name="linkcalm" />
+      <input type="submit" value="Add json" />
+      <br /><br /><br /><br /><br />
+      <hr />
+    </form>
+    <form method="POST" action="/motivateLink" enctype="multipart/form-data">
+      <span>Add JSON -- motivate link</span>
+      <br />
+      <input type="text" name="linkmotivate" />
+      <input type="submit" value="Add json" />
+      <br /><br /><br /><br /><br />
+      <hr />
+    </form>
+    <form method="POST" action="/dailytip" enctype="multipart/form-data">
+      <span>Add JSON -- daily tip</span>
+      <br />
+      <input type="text" name="tip" />
+      <input type="submit" value="Add json" />
+      <br /><br /><br /><br /><br />
+      <hr />
+    </form>
+    <a href="/calmlist"> calm List </a>
+    <br /><br />
+    <a href="/motivatelist"> motivate List </a>
+    <br /><br /><a href="/contactlist"> contact List </a>
+    <hr />
+    <br />
+    <button onclick="walletCheck()">Wallet Connect</button>
+    <h1>Add/Remove Admis</h1>
+    <input
+      style="width: 380px"
+      id="address-add"
+      type="text"
+      name="address-add"
+      placeholder="Address:"
+    />
+    <input onclick="setAdmin()" type="submit" value="Add to Admins" />
+    <h6
+      id="resualt-add"
+      style="color: green; font-weight: bold; font-size: 13px"
+    ></h6>
+    <br />
+    <input
+      style="width: 380px"
+      id="address-rem"
+      type="text"
+      name="address-rem"
+      placeholder="Address:"
+    />
+    <input onclick="remAdmin()" type="submit" value="Remove from Admins" />
+    <h6
+      id="resualt-rem"
+      style="color: red; font-weight: bold; font-size: 13px"
+    ></h6>
+    <br />
+    <h2>Admin Check</h2>
+    <input
+      style="width: 380px"
+      id="adminCheck"
+      type="text"
+      name="admin-check"
+      placeholder="Address:"
+    />
+    <input onclick="_adminCheck()" type="submit" value="Check Admin" />
+    <h6
+      id="resualt-admin"
+      style="color: Blue; font-weight: bold; font-size: 13px"
+    ></h6>
+    <hr />
+    <h1>Transctions</h1>
+    <h2>BNB balance check</h2>
+    <input onclick="bnbBalance(), price()" type="submit" value="BNB balance" />
+    <h6
+      id="resualt-bnbBal"
+      style="color: orange; font-weight: bold; font-size: 13px"
+    ></h6>
+
+    <h2>BNB send</h2>
+    <input
+      style="width: 380px"
+      id="toAddrss"
+      type="text"
+      name="sendbnb"
+      placeholder="Address to:"
+    />
+    <input
+      style="width: 110px"
+      id="value"
+      type="text"
+      name="bnBsend"
+      placeholder="Value: (BNB)"
+    />
+    <input onclick="sendbnb()" type="submit" value="BNB send" />
+    <h6
+      id="resualt-sendbnb"
+      style="color: green; font-weight: bold; font-size: 13px"
+    ></h6>
+    <script>
+      //document.getElementsByTagName("body").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("ad").style.opacity = "1";
+      }, 1500);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="../smartcontracts/token.js"></script>
+  </body>
+</html>

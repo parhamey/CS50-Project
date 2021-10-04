@@ -1,0 +1,133 @@
+/* ScrolBar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 13px 50px;
+  cursor: pointer;
+  border: none;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  top: 0;
+  z-index: 1;
+  transition: color 1s ease-out;
+}
+
+#primary:hover {
+  background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9);
+  background-size: 250%;
+  animation: bg-animation 8s infinite alternate;
+  color: #fff;
+  z-index: 1;
+}
+
+#secondery:hover {
+  background: linear-gradient(225deg, #f64f59, #c471ed, #12c2e9);
+  background-size: 250%;
+  animation: bg-animation 8s infinite alternate;
+  color: #fff;
+  z-index: 1;
+}
+
+#primary-txt:hover {
+  background: linear-gradient(295deg, #f64f59, #c471ed, #12c2e9);
+  background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #12c2e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 250%;
+  animation: bg-animation 8s infinite alternate;
+  color: #fff;
+  z-index: 1;
+}
+
+@keyframes txt-animate {
+  0% {
+    padding: 13px 50px;
+    font-size: 18px;
+  }
+  100% {
+    padding: 15px 60px;
+    font-size: 25px;
+    transform: translateY(-5px);
+  }
+  0% {
+    padding: 13px 50px;
+    font-size: 18px;
+  }
+}
+
+.input {
+  padding: 10px;
+  border-radius: 15px;
+  width: 100%;
+  color: #333;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Tanha";
+  border: none;
+  outline-style: none;
+}
+
+.form-btn {
+  padding: 10px 20px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  width: 70%;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Tanha";
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #f4f4f4;
+}
+
+/* Text */
+.primary-color {
+  color: #ffaf7b;
+}
+
+.normal-text {
+  font-weight: 50;
+}
+
+/* in bakhsh tavasot mozart add shode*/
+#primary-txt {
+  transition: opacity 1s ease-in-out;
+}
+#quote-box {
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  transition: opacity 1s ease-in-out;
+}
+#quote {
+  color: #fff;
+  transition: opacity 1s ease-in-out;
+}
+
+#tip {
+  margin-top: 40px;
+  font-size: 20px;
+  color: #333;
+  flex-direction: row;
+  display: flex;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fa" >
+  <head>
+    <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+    <script src="https://kit.fontawesome.com/190717050c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="icon" href="./favicon/favicon.png" sizes="16x16" type="image/png">
+    <link href="./css/aos.css" rel="stylesheet">
+    <title>Mood | Home</title>
+  </head>
+  <!-- onload="walletcheck()" --> 
+  <body onload="checkkon()" id="home" dir="rtl">
+    <audio id="music">
+      <source src=""/>
+    </audio>
+    <header >
+      <div id="navbar" class="navbar">
+        <!-- id icon ro ezafe kardam-->
+        <h1 class="logo"><a id="primary-txt" >Mood<i id="icon" class="fas fa-meh fa-1.5x"></i></a></i></h1>
+        <nav>
+         <ul>
+           <li><a id="home-btn" class="active" ><i class="fas fa-home"></i>خانه</a></li>
+           <li><a id="tip-btn"><i class="fas fa-lightbulb"></i>پیشنهاد</a></li>
+           <li><a id="aboutus-btn" ><i class="fas fa-question"></i>درباره ما</a></li>
+           <li><a id="contactus-btn" ><i class="fas fa-phone"></i>تماس با ما</a></li>
+           <li ><a onclick="load()" id="wallet-btn" ><i  class="fas fa-wallet"></i><span id="walt-btn"> کیف پول</span></a></li>
+         </ul>
+        </nav>
+      </div>
+      <div class="bg">
+        <div class="box">
+          <div><i class="fas fa-smile fa-9x"></i></div>
+          <div><i class="fas fas fa-grin-tears fa-4x"></i></div>
+          <div><i class="fas fas fa-angry fa-6x"></i></div>
+          <div><i class="fas fa-smile-wink fa-5x"></i></div>
+          <div><i class="fas fa-flushed fa-6x"></i></div>
+          <div><i class="fas fas fa-frown  fa-9x"></i></div>
+          <div><i class="fas fa-grin-hearts fa-6x"></i></div>
+          <div><i class="fas fa-sad-cry fa-6x"></i></div>
+          <div><i class="fas fa-meh fa-9x"></i></div>
+          <div><i class="fas fa-grin-squint fa-9x"></i></div>
+        </div>
+      </div>
+      <div id="showcase">
+          <div class="showcase-content">
+            <h1 id="mood-sen">مودت <span class="normal-text">رو انتخاب کن!</span></h1>
+            <div class="option">
+              <!--id quote ro ezafe kardam-->
+            <div id="quote-box">
+            <span id="quote" class="normal-text"></span></div> 
+            <a onclick="checkkon()" id="primary" class="btn" >آرامش</a>
+            <a onclick="checkkon()" id="secondery" class="btn">انگیزه</a>
+            </div>
+            <h5></h5>
+            <h5><p id="tip"></p></h5>
+          </div>
+      </div>
+      <video autoplay muted loop id="video">
+        <source src="" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </header>
+    <section id="aboutus">
+      <div class="aboutUs">
+      <div id="phrm" class="about-box phrm" data-aos="fade-left">
+        <div class="info">
+          <div class="info-txt">
+           <h3>پرهام اسمعیل یزدی</h3>
+           <h4>دانشجو مهندسی کامپیوتر</h4>
+           <p> علاقه مند به بلاکچین و دنیای کریپتوکارنسی ها، فعالیت در نوشتن قرارداد های هوشمند و برنامه نویسی حوضه بلاکچین و علاقه مند به Back-End و Front-End.</p>
+          </div>
+          <div class="pic">
+            <img id="phrm-pic" src="./prof-pic/phrm.png" alt="phrm">
+            <div class="overlay">
+              <div class="social">
+                <a href="mailto: parhamyazdi@yahoo.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://github.com/parhamey" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://t.me/papayanki" target="_blank"><i class="fab fa-telegram-plane fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mozart" class="about-box mozart" data-aos="fade-right">
+        <div class="info">
+          <div class="info-txt">
+           <h3>امیرمحمد شاپوری</h3>
+           <h4>دانشجو مهندسی کامپیوتر</h4>
+           <p>علاقه مند به Back-End و زبان JavaScript
+            تجربه ساخت اپلیکیشن اندروید با زبان Kotlin
+            دارای چندین مقام در حوزه برنامه نویسی رباتیک.</p>
+          </div>
+          <div class="pic">
+            <img id="mozart-pic" src="./prof-pic/moazart.png" alt="mozart">
+            <div class="overlay">
+              <div class="social">
+                <a href="mailto: Amirshapoori707@yahoo.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://github.com/ShpMozart" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://t.me/youngamiirr" target="_blank"><i class="fab fa-telegram-plane fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="contactus" class="contactUs">
+      <form method="POST" action="/contactus" enctype="multipart/form-data"> 
+       <div class="mainbox" data-aos="zoom-in-up">  
+         <div class="main-pic">
+           <img src="prof-pic/phone.jpg" alt="phone">
+         </div>
+         <div class="main-txt">
+           <textarea id="contactus-text" name="contactustext" rows="4" cols="50"></textarea>
+         </div>
+         <div class="information" >
+           <h2>اطلاعات تماس</h2>
+           <div class="infobox">
+           <h5 style="color: #fff; padding: 0px 15px 10px 0px; font-weight: 300;">نام و نام خانوادگی :</h5>
+           <label for="name"></label>
+           <input class="input" type="text" name="name" id="name" placeholder="نام و نام خانوادگی">
+           </div>
+           <div class="infobox">
+             <h5 style="color: #fff; padding: 0px 15px 10px 0px; font-weight: 300;">ایمیل :</h5>
+             <label for="email"></label>
+             <input class="input" type="email" name="email" id="email" placeholder="ایمیل ">
+             </div>
+             <div class="infobox">
+               <h5 style="color: #fff; padding: 0px 15px 10px 0px; font-weight: 300;">شماره تماس :</h5>
+               <label for="phone"></label>
+               <input class="input" type="text" name="phone" id="phone" placeholder="شماره تماس">
+               </div>
+             <input type="submit" value="ارسال" name="submit" id="submit" class="form-btn">
+           </div>
+         </div>
+       </form>
+     </section>
+    <footer>
+      <div style="display: flex; flex-shrink: 0; justify-content: space-between; align-items: center; opacity: 0.9; width: 100%; height: 40px; background-color: #333;" class="foter" dir="ltr">
+          <div class="copyright">
+            <h5 style="display: flex; flex-shrink: 0; padding-right: 20px; height: 100%; text-align: center; color: #d6d6d6; font-weight: 300; font-size: medium;">Copyright © 2021 Mood, All rights reserved</h5>
+            </div>
+            <div style="color: #d6d6d6; font-weight: 300;"><h5 class="empty" id="tip-footer">برای رهایی از استرس بیشتر بخندید :)</h5></div>
+            <div style="padding-right: 260px; padding-left: 20px;" class="icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+      </div>
+    </footer>
+    <div class="loader">
+      <div class="spinner">
+        <div class="block"></div>
+        <div class="chain"></div>
+      </div>
+    </div>
+    <!-- 
+    <script src="https://kit.fontawesome.com/190717050c.js" crossorigin="anonymous"></script>
+   -->
+   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+   <script src="./smartcontracts/token.js"></script>
+   <script src="./script/script.js"></script>
+   <script src="./script/jquery.js"></script>
+    <script src="aos.js"></script>
+    <script>
+      AOS.init();
+    </script> 
+  </body>
+</html>
